@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="container">
+
+  <div class="cards">
+    <img src="./images/Group 1.png" class="card" alt="">
+    <p class="cvc-details">000</p>
+<div class="card-details">
+  <img src="./images/card-logo.svg" class="card-logo" alt="card-logo" >
+   
+  <div class="text-grid">
+ 
+    <h1 class="heading">0000 0000 0000 0000</h1>  
+  <div class="text">
+    <p class="paragraph-1" > Jane Appleseed</p>
+    <p class="paragraph-2" > <span class="monthh" >00</span>/<span class="yearr" >00</span></p>
+  </div>
+  </div>
+
+
+</div>
+</div>
+
+
+
+
+
+  <form class="form">
+    <div class="name">
+      <label for="inputt-name" >Cardholder Name</label>
+      <input
+        id="inputt-name"
+        class="input-name"
+        type="text"
+        placeholder="e.g. Jane Appleseed"
+        maxlength="20"
+      />
+      <p class="name-error">Can't be blank</p>
+
+
+    </div>
+    <div class="card-number">
+      <label for="ccn">Card Number</label>
+      <input
+      id="ccn"
+        class="input-card-number"
+        type="text"
+        name="card-number"
+        inputmode="numeric"
+        pattern="[0-9\s]{13,19}"
+        autocomplete="cc-number"
+        maxlength="16"
+        placeholder=" e.g. 1234 5678 9123 0000"
+       
+      />
+      <p class="card-error">Can't be blank</p>
+    </div>
+
+    <div class="flex">
+
+    <div class="expiration">
+      <label for="my" >Exp. Date (mm/yy)</label>
+      <div class="my-flex">
+      <input
+      id="my"
+        class="month"
+        type="text"
+        name="month"
+        placeholder="MM"
+        maxlength="2"
+        size="2"
+       
+      />
+
+
+      <input
+      id="my"
+        class="year"
+        type="text"
+        name="year"
+        placeholder="YY"
+        maxlength="2"
+        size="2"
+        />
+      
+    
+    </div>
+
+ <p class="exp-error">Can't be blank</p>
+ 
+    </div>
+
+    
+
+    <div class="cvc">
+      <label for="cvc">cvc</label>
+      <input
+      id="cvc"
+        class="input-cvc"
+        type="text"
+        maxlength="3"
+        size="3"
+        placeholder="e.g. 123"
+        name="cvc"
+      />
+
+
+      <p class="cvc-error">Can't be blank</p>
+    </div>
+      
+  </div>
+
+    <button type="submit" class="btn">Confirm</button>
+  </form>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
