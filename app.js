@@ -52,6 +52,34 @@ inputYear.addEventListener("input", (e)=>{
 
 function validation(){
 
+   if(inputName.value === ''){
+      inputName.style.border = '1px solid hsl(0, 100%, 66%)'
+   }else{
+      inputName.style.border = '1px solid #dfdee0'
+   }
+
+
+   if(inputNumber.value === ''){
+      inputNumber.style.border = '1px solid hsl(0, 100%, 66%)'
+   }else{
+      inputNumber.style.border = '1px solid #dfdee0'
+   }
+
+
+   if(inputMonth.value === '' || inputYear.value === ''){
+      inputMonth.style.border = '1px solid hsl(0, 100%, 66%)'
+      inputYear.style.border = '1px solid hsl(0, 100%, 66%)'
+   }else{
+      inputMonth.style.border = '1px solid #dfdee0'
+      inputYear.style.border = '1px solid #dfdee0'
+   }
+
+   if(inputCvc.value === ''){
+      inputCvc.style.border = '1px solid hsl(0, 100%, 66%)'
+   }else{
+      inputCvc.style.border = '1px solid #dfdee0'
+   }
+
 inputName.value === '' ?  nameError.classList.add("show-name-error") : nameError.classList.remove("show-name-error");  
 
 inputNumber.value === '' ? cardError.classList.add("show-card-error") : cardError.classList.remove("show-card-error");
