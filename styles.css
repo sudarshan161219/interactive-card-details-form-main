@@ -225,7 +225,7 @@ width: 70%;
     justify-content: space-between;
 }
 
-.btn{
+.btn, .continue{
     background-color: var(--color-Verydarkviolet);
     color: var(--color-White);
     height: 50px;
@@ -282,7 +282,7 @@ grid-gap: 20px;
 
 
 .paragraph-heading{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     color: var(--color-Verydarkviolet);
     letter-spacing: 1.2px;
@@ -290,7 +290,7 @@ grid-gap: 20px;
 
 .paragraph{
     color:var(--color-Darkgrayishviolet);
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 1.2px;
 }
 
@@ -496,7 +496,6 @@ grid-gap: 20px;
 
     .form {
         margin-top: 0;
-        display: grid;
         grid-gap: 25px;
     }
 
@@ -514,6 +513,16 @@ grid-gap: 20px;
     .cvc-details {
         top: 346px;
         left: 365px;
+    }
+
+
+    .thank-you {
+        width: 500px;
+justify-content: center;
+    }
+
+    .continue{
+        width: 500px;
     }
 
 }

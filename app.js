@@ -1,7 +1,7 @@
 const cardNumber = document.querySelector(".heading");
 const namE = document.querySelector(".paragraph-1");
 const month = document.querySelector(".monthh");
-const  year = document.querySelector(".yearr");
+const year = document.querySelector(".yearr");
 const cvc = document.querySelector(".cvc-details");
 
 
@@ -15,6 +15,7 @@ const thankyou = document.querySelector(".thank-you");
 const input = document.querySelector(".input");
 
 const btn = document.querySelector(".btn");
+const continueBtn = document.querySelector(".continue")
 
 
 const nameError = document.querySelector('.name-error');
@@ -24,110 +25,124 @@ const cvcError = document.querySelector('.cvc-error');
 
 
 form.addEventListener('submit', (e) => {
-	e.preventDefault();
+    e.preventDefault();
 
 });
 
 inputName.addEventListener("input", (e) => {
-namE.textContent = e.target.value 
-} );
+    namE.textContent = e.target.value
+});
 
 
 inputNumber.value.toString().replace(/\d{4}(?=.)/g, '$& ')
 inputNumber.addEventListener("input", (e) => {
-cardNumber.textContent = e.target.value.toString().replace(/\d{4}(?=.)/g, '$& ')
- } );
- 
-inputMonth.addEventListener("input", (e)=>{
-month.textContent = e.target.value 
-} );
+    cardNumber.textContent = e.target.value.toString().replace(/\d{4}(?=.)/g, '$& ')
+});
 
-inputYear.addEventListener("input", (e)=>{
-    year.textContent = e.target.value 
- } );
-    
+inputMonth.addEventListener("input", (e) => {
+    month.textContent = e.target.value
+});
 
- inputCvc.addEventListener("input", (e)=>{
-    cvc.textContent = e.target.value 
- } );
+inputYear.addEventListener("input", (e) => {
+    year.textContent = e.target.value
+});
 
 
-function validation(){
-
-   if(inputName.value === ''){
-      inputName.style.border = '1px solid hsl(0, 100%, 66%)'
-   }else{
-      inputName.style.border = '1px solid #dfdee0'
-   }
+inputCvc.addEventListener("input", (e) => {
+    cvc.textContent = e.target.value
+});
 
 
-   if(inputNumber.value === ''){
-      inputNumber.style.border = '1px solid hsl(0, 100%, 66%)'
-   }else{
-      inputNumber.style.border = '1px solid #dfdee0'
-   }
+function validation() {
+
+    if (inputName.value === '') {
+        inputName.style.border = '1px solid hsl(0, 100%, 66%)'
+    } else {
+        inputName.style.border = '1px solid #dfdee0'
+    }
 
 
-   if(inputMonth.value === '' || inputYear.value === ''){
-      inputMonth.style.border = '1px solid hsl(0, 100%, 66%)'
-      inputYear.style.border = '1px solid hsl(0, 100%, 66%)'
-   }else{
-      inputMonth.style.border = '1px solid #dfdee0'
-      inputYear.style.border = '1px solid #dfdee0'
-   }
+    if (inputNumber.value === '') {
+        inputNumber.style.border = '1px solid hsl(0, 100%, 66%)'
+    } else {
+        inputNumber.style.border = '1px solid #dfdee0'
+    }
 
 
-   if(inputCvc.value === ''){
-      inputCvc.style.border = '1px solid hsl(0, 100%, 66%)'
-   }else{
-      inputCvc.style.border = '1px solid #dfdee0'
-   }
+    if (inputMonth.value === '' || inputYear.value === '') {
+        inputMonth.style.border = '1px solid hsl(0, 100%, 66%)'
+        inputYear.style.border = '1px solid hsl(0, 100%, 66%)'
+    } else {
+        inputMonth.style.border = '1px solid #dfdee0'
+        inputYear.style.border = '1px solid #dfdee0'
+    }
+
+
+    if (inputCvc.value === '') {
+        inputCvc.style.border = '1px solid hsl(0, 100%, 66%)'
+    } else {
+        inputCvc.style.border = '1px solid #dfdee0'
+    }
 
 
 
-   // if(inputName.value === namE.textContent || inputNumber.value === cardNumber.textContent ||inputMonth.value === month.textContent || inputYear.value === year.textContent || inputCvc.value ===  cvc.textContent)
-   // {
-   
-   //    form.classList.add("hide-form") 
-   //    thankyou.classList.add("show-thank-you")  
+    if (input.value === namE.textContent) {
 
-   // }
+        if (inputNumber.value === cardNumber.textContent) {
 
- if(inputName.value === namE.textContent || inputNumber.value === cardNumber.textContent ||inputMonth.value === month.textContent || inputYear.value === year.textContent || inputCvc.value ===  cvc.textContent)
-   {
-   
-      form.classList.add("hide-form") 
-      thankyou.classList.add("show-thank-you")  
+            if (inputMonth.value === month.textContent) {
 
-   }
+                if (inputYear.value === year.textContent) {
 
-    
-   // if(input.value === namE.textContent )
-   // {
-   
-   //    form.classList.add("hide-form") 
-   //    thankyou.classList.add("show-thank-you")  
+                    if (inputCvc.value === cvc.textContent) {
+                        form.classList.add("hide-form")
+                        thankyou.classList.add("show-thank-you")
+                    }
 
-   // }
+                    form.classList.add("hide-form")
+                    thankyou.classList.add("show-thank-you")
+                }
 
-inputName.value === '' ?  nameError.classList.add("show-name-error") : nameError.classList.remove("show-name-error");  
+                form.classList.add("hide-form")
+                thankyou.classList.add("show-thank-you")
+            }
 
-inputNumber.value === '' ? cardError.classList.add("show-card-error") : cardError.classList.remove("show-card-error");
+            form.classList.add("hide-form")
+            thankyou.classList.add("show-thank-you")
+        }
 
-inputMonth.value === '' ?  monthYear.classList.add("show-exp-error") : monthYear.classList.remove("show-exp-error");
+        form.classList.add("hide-form")
+        thankyou.classList.add("show-thank-you")
 
-inputYear.value === '' ?  monthYear.classList.add("show-exp-error") : monthYear.classList.remove("show-exp-error");
+    }
 
-inputCvc.value === '' ? cvcError.classList.add("show-cvc-error") : cvcError.classList.remove("show-cvc-error");
+    inputName.value === '' ? nameError.classList.add("show-name-error") : nameError.classList.remove("show-name-error");
+
+    inputNumber.value === '' ? cardError.classList.add("show-card-error") : cardError.classList.remove("show-card-error");
+
+    inputMonth.value === '' ? monthYear.classList.add("show-exp-error") : monthYear.classList.remove("show-exp-error");
+
+    inputYear.value === '' ? monthYear.classList.add("show-exp-error") : monthYear.classList.remove("show-exp-error");
+
+    inputCvc.value === '' ? cvcError.classList.add("show-cvc-error") : cvcError.classList.remove("show-cvc-error");
 
 
 }
 
 
- btn.addEventListener("click", () => {
+btn.addEventListener("click", () => {
 
+    validation()
+})
 
-   validation()
-console.log(input.value)
+continueBtn.addEventListener('click', () => {
+   location.reload();
+inputName.value === ''
+inputNumber.value === ''
+inputMonth.value === ''
+inputYear.value === ''
+inputCvc.value === ''
+	form.classList.remove('hide-form');
+	thankyou.classList.remove('show-thank-you');
+});
 
- })
