@@ -102,7 +102,7 @@ body {
 
 
 
-.card {
+.mobile-card {
   width: 100%;
   /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
 }
@@ -247,6 +247,56 @@ width: 70%;
     letter-spacing: 1.1px;
 }
 
+.back-card, .front-card{
+    display: none;
+}
+
+
+.hide-form{
+    display: none;
+}
+
+
+.thank-you {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-gap: 40px;
+    margin-top: 3rem;
+    display: none;
+}
+
+.show-thank-you{
+    display: grid;
+}
+
+.complete {
+    margin: 0 auto;
+    width: 100px;
+}
+
+.complete-grid{
+display: grid;
+grid-gap: 20px;
+}
+
+
+.paragraph-heading{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color-Verydarkviolet);
+    letter-spacing: 1.2px;
+}
+
+.paragraph{
+    color:var(--color-Darkgrayishviolet);
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+}
+
+
+
+
 @media (min-width:365px) {
 
   
@@ -371,6 +421,99 @@ width: 70%;
         /* display: none; */
         margin-top: 0.4rem;
         font-size: 0.88rem;
+    }
+
+}
+
+@media (min-width:768px) {
+    
+.container{
+    display: grid;
+    justify-content: center;
+}
+
+    .form{
+        margin-top: 10rem;
+        width: 500px;
+    }
+
+    .card-details {
+        grid-gap: 60px;
+        top: 200px;
+        left: 34px;
+    }
+
+    .cvc-details {
+        top: 143px;
+        font-size: 1rem;
+        left: 435px;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .text-grid {
+        grid-gap: 22px;
+    }
+}
+
+
+@media (min-width:1024px) {
+    body {
+        justify-content: center;
+        background-image: url(./images/bg-main-desktop.png);
+        background-repeat: no-repeat;
+    }
+
+
+    .mobile-card{
+        display: none;
+    }
+
+
+     .desktop-container{
+        width: 900px;
+        display: flex;
+        align-items: center;
+    }
+
+
+   
+    .back-card, .front-card{
+        display: inline-block;
+        width: 350px;
+    }
+
+    .front-card{
+        margin-bottom: 2rem;
+    }
+
+    .back-card{
+        position: relative;
+        left: 90px;
+    }
+
+    .form {
+        margin-top: 0;
+        display: grid;
+        grid-gap: 25px;
+    }
+
+    .card-details {
+        grid-gap: 45px;
+        top: 52px;
+        left: 28px;
+        width: 400px;
+    }
+
+    .heading{
+        font-size: 1.3rem;
+    }
+
+    .cvc-details {
+        top: 346px;
+        left: 365px;
     }
 
 }

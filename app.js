@@ -11,6 +11,8 @@ const inputMonth = document.querySelector(".month");
 const inputYear = document.querySelector(".year");
 const inputCvc = document.querySelector(".input-cvc");
 const form = document.querySelector('.form');
+const thankyou = document.querySelector(".thank-you");
+const input = document.querySelector(".input");
 
 const btn = document.querySelector(".btn");
 
@@ -19,7 +21,7 @@ const nameError = document.querySelector('.name-error');
 const cardError = document.querySelector('.card-error');
 const monthYear = document.querySelector('.exp-error');
 const cvcError = document.querySelector('.cvc-error');
-// const nameError = document.querySelector('.name-error');
+
 
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -27,7 +29,7 @@ form.addEventListener('submit', (e) => {
 });
 
 inputName.addEventListener("input", (e) => {
- namE.textContent = e.target.value 
+namE.textContent = e.target.value 
 } );
 
 
@@ -74,11 +76,39 @@ function validation(){
       inputYear.style.border = '1px solid #dfdee0'
    }
 
+
    if(inputCvc.value === ''){
       inputCvc.style.border = '1px solid hsl(0, 100%, 66%)'
    }else{
       inputCvc.style.border = '1px solid #dfdee0'
    }
+
+
+
+   // if(inputName.value === namE.textContent || inputNumber.value === cardNumber.textContent ||inputMonth.value === month.textContent || inputYear.value === year.textContent || inputCvc.value ===  cvc.textContent)
+   // {
+   
+   //    form.classList.add("hide-form") 
+   //    thankyou.classList.add("show-thank-you")  
+
+   // }
+
+ if(inputName.value === namE.textContent || inputNumber.value === cardNumber.textContent ||inputMonth.value === month.textContent || inputYear.value === year.textContent || inputCvc.value ===  cvc.textContent)
+   {
+   
+      form.classList.add("hide-form") 
+      thankyou.classList.add("show-thank-you")  
+
+   }
+
+    
+   // if(input.value === namE.textContent )
+   // {
+   
+   //    form.classList.add("hide-form") 
+   //    thankyou.classList.add("show-thank-you")  
+
+   // }
 
 inputName.value === '' ?  nameError.classList.add("show-name-error") : nameError.classList.remove("show-name-error");  
 
@@ -91,7 +121,6 @@ inputYear.value === '' ?  monthYear.classList.add("show-exp-error") : monthYear.
 inputCvc.value === '' ? cvcError.classList.add("show-cvc-error") : cvcError.classList.remove("show-cvc-error");
 
 
-    
 }
 
 
@@ -99,5 +128,6 @@ inputCvc.value === '' ? cvcError.classList.add("show-cvc-error") : cvcError.clas
 
 
    validation()
+console.log(input.value)
 
  })
