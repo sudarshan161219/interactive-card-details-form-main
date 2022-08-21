@@ -161,14 +161,23 @@ label{
     font-weight: 700;
 }
 
-.name-error, .card-error, .exp-error, .cvc-error {
+.card-error-2 , .exp-error-2, .cvc-error-2{
+    display: none;
+    margin-top: 0.4rem;
+    font-size: 0.88rem;
+    color: var(--color-errors);
+}
+
+
+.name-error, .card-error, .exp-error, .cvc-error{
     display: none;
     margin-top: 0.3rem;
     font-size: 0.77rem;
     color: var(--color-errors);
 }
 
-.show-name-error, .show-card-error, .show-exp-error, .show-cvc-error {
+.show-name-error, .show-card-error, .show-exp-error, .show-cvc-error,.show-card-error-2
+, .show-exp-error-2, .show-cvc-error-2 {
     display: block;
 }
 
