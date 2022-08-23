@@ -533,5 +533,53 @@ justify-content: center;
     .continue{
         width: 500px;
     }
+    .continue:hover , .btn:hover{
+        cursor: pointer;
+    }
+}
+
+@media (min-width:1366px) {
+
+body{
+    background-size: auto;
+}
+
+
+.desktop-container {
+    width: 1000px;
+}
+
+.back-card, .front-card {
+    width: 400px;
+}
+
+
+.card-details {
+    grid-gap: 50px;
+    top: 59px;
+    left: 34px;
+}
+
+.card-logo {
+    width: 80px;
+}
+
+.heading {
+    font-size: 1.6rem;
+}
+
+.paragraph-1 {
+    width: 45%;
+}
+
+
+.cvc-details {
+    top: 387px;
+    left: 402px;
+}
+
+.continue {
+    width: 425px;
+}
 
 }
